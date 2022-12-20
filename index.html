@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سریال بی گناه</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./Font.css">
+  </head>
+  <body>
+    <div id="background"></div>
+    <div id="container">
+        <div id="movie-info">
+            <!-- <div id="poster-parent"> -->
+                <a href="#"><img id="poster" ></a>
+            <!-- </div> -->
+            <div id="movie-detail">
+                <h1 id="title"></h1>
+                <p id="en-title"></p>
+                <div id="rate">
+                    <div id="score">
+                        <span id="total"></span>
+                        <span id="percent"></span>
+                    </div>
+                    <div id="imdb-parent">
+                        <span id="imdb"></span>
+                    </div>
+                </div>
+                <p id="adult"></p>
+                <p id="show-time"></p>
+                <div id="genre-parent">
+                    <span id="audience"></span>
+                    <span id="genre"></span>
+                </div>
+            </div>
+        </div>
+        <div id="watch-section">
+            <div id="follow-section">
+                <a id="following"></a>
+                <button><img id="like"></img></button>
+                <button><img id="dislike"></img></button>
+            </div>
+            <!-- <div id="watch-element"> -->
+                <a id="watchbtn"></a>
+            <!-- </div> -->
+        </div>
+        <div id="video-section">
+            <img id="video"></img>
+            <div>
+                <h2 id="video-title"></h2>
+                <p id="description"></p>
+            </div>
+        </div>
+        <p id="cast-title"></p>
+        <div id="cast-section">
+            <div>
+                <img id="img1">
+                <span id="num1"></span>
+            </div>
+            <div>
+                <img id="img2">
+                <span id="num2"></span>
+            </div>
+            <div>
+                <img id="img3">
+                <span id="num3"></span>
+            </div>
+            <div>
+                <img id="img4">
+                <span id="num4"></span>
+            </div>
+            <div>
+                <img id="img5">
+                <span id="num5"></span>
+            </div>
+        </div>
+    </div>
+    <!-- get element by id mikonim va inner html ro midim movie.title -->
+    <!-- mituni ye div besazi rate ro bendazi tush total va percent ham bachehash bashan -->
+    <script>
+        var movie = {
+          backGround: "https://static.cdn.asset.filimo.com/flmt/mov_cvr_101725_729.jpg",
+          title: "سریال بی گناه",
+          poster: "https://static.cdn.asset.filimo.com/flmt/mov_101725_44660-m.jpg",
+          name: "جیران",
+          enTitle: "Innocent",
+          rate: {
+              total: "573,873",
+              percent: 546 + "%",
+          },
+          imdb: 10 + "/" + 5.1,
+          showTime: "یکشنبه ها، ساعت 12",
+          adult: "مناسب برای افراد بالای 12 سال",
+          audience: "خانوادگی",
+          genre: "درام",
+          following: "دنبال میکنم",
+          like: "http://cdn.onlinewebfonts.com/svg/img_97689.png",
+          dislike: "https://cdn-icons-png.flaticon.com/512/126/126504.png",
+          watchBtn: " ورود و تماشا",
+          video: "https://static.cdn.asset.aparat.com/avt/48733771-7226-b__5912.jpg",
+          videoTitle: "درباره سریال بی گناه",
+          description: "  می‌باشد. در این سریال  محسن کیایی، ویشکا آسایش، شبنم مقدمی، مهران احمدی، ماهور الوند، آتیلا پسیانی، نسرین نصرتی، حسین پورکریمی، هدیه بازوند، نوید لایقی مقدم، منوچهر زنده دل، دنیا مدنی، مبینا طبایی، مهران وثوقی، مسعود رایگان، مهرانه مهین ترابی، رویا تیموریان، باران احمدی، احسان معجونی و یگانه رادبخش به هنرمندی پرداخته‌اند.",
+          casts: {
+            title:"بازیگران سریال بی گناه",
+            num1: "محسن کیایی",
+            img1: "https://static.cdn.asset.filimo.com/flmt/rvw_cast_6188_1-s.jpg",
+            num2:"ویشکا آسایش",
+            num3:"شبنم مقدمی",
+            num4:"مهران احمدی",
+            num5:"ماهور الوند",
+        }
+    };
+    document.getElementById("poster").setAttribute("src", movie.poster);
+    // document.getElementById("background").setAttribute("src" , movie.backGround);
+    document.getElementById("title").innerHTML = movie.title;
+    document.getElementById("en-title").innerHTML = movie.enTitle;
+    document.getElementById("total").innerHTML = movie.rate.total;
+    document.getElementById("percent").innerHTML = movie.rate.percent;
+    document.getElementById("imdb").innerHTML = movie.imdb;
+    document.getElementById("adult").innerHTML = movie.adult;
+    document.getElementById("show-time").innerHTML = movie.showTime;
+    document.getElementById("audience").innerHTML = movie.audience;
+    document.getElementById("genre").innerHTML = movie.genre;
+    document.getElementById("following").innerHTML = movie.following;
+    document.getElementById("like").setAttribute("src", movie.like);
+    document.getElementById("dislike").setAttribute("src", movie.dislike);
+    document.getElementById("watchbtn").innerHTML = movie.watchBtn;
+    document.getElementById("video").setAttribute("src", movie.video);
+    document.getElementById("video-title").innerHTML = movie.videoTitle;
+    document.getElementById("description").innerHTML = movie.description;
+    document.getElementById("cast-title").innerHTML = movie.casts.title;
+    document.getElementById("img1").setAttribute("src", movie.casts.img1);
+    document.getElementById("img2").setAttribute("src", movie.casts.img1);
+    document.getElementById("img3").setAttribute("src", movie.casts.img1);
+    document.getElementById("img4").setAttribute("src", movie.casts.img1);
+    document.getElementById("img5").setAttribute("src", movie.casts.img1);
+    document.getElementById("num1").innerHTML = movie.casts.num1;
+    document.getElementById("num2").innerHTML = movie.casts.num2;
+    document.getElementById("num3").innerHTML = movie.casts.num3;
+    document.getElementById("num4").innerHTML = movie.casts.num4;
+    document.getElementById("num5").innerHTML = movie.casts.num5;
+    </script>
+  </body>
+</html>
